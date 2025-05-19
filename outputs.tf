@@ -1,7 +1,7 @@
 output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+  value = try(aws_instance.ubuntu.ami, null)
 }
 
 output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+  value = try(aws_instance.ubuntu.arn, null)
 }
